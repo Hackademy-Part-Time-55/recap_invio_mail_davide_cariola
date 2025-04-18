@@ -3,7 +3,7 @@
     <x-hero-section />
 
     <div class="container-fluid p-5 mb-5">
-        <div class="row justify-content-between">
+        <div class="row justify-content-between p-5">
             <div class="col-12 col-md-6">
                 <h1 class="display-2 fw-semibold">
                     We are Hyperfocus.
@@ -23,8 +23,8 @@
     />
 
 
-    <div class="container-fluid p-5 bg-accent mb-5">
-        <div class="row justify-content-between mb-4">
+    <div id="journal" class="container-fluid p-5 bg-accent mb-5">
+        <div class="row justify-content-between mb-4 p-5">
             <div class="col-12 col-md-6">
                 <h2>
                     Journal
@@ -36,7 +36,7 @@
                 </p>
             </div>
         </div>
-        <div class="row justify-content-between">
+        <div class="row justify-content-between p-5">
             @foreach($articles as $article)
                 <div class="col-12 col-md-3">
                     <img src="{{ $article['imageLink'] }}" alt="{{ $article['excerpt'] }}" class="img-fluid mb-3">

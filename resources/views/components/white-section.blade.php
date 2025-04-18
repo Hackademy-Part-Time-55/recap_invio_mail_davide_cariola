@@ -5,7 +5,7 @@
 ])
 
 <div class="container-fluid p-5 mb-5">
-    <div class="row mb-4">
+    <div class="row mb-4 p-5">
         <div class="col-12 col-md-6">
             <h2>
                 {{ $title }}
@@ -17,7 +17,7 @@
             </p>
         </div>
     </div>
-    <div class="row justify-content-between">
+    <div class="row justify-content-between p-5">
         @foreach($data as $element)
             <div class="col-12 col-md-6 mb-5">
                 <img src="{{ $element['imageLink'] }}" alt="{{ $element['title'] ?? 'Immagine dello studio di Hyperfocus' }}" class="img-fluid mb-3">

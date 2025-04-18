@@ -17,8 +17,12 @@ class ArticleController extends Controller
     {
         $articles = $this->journalArticles();
 
-        dd($articles, $title);
+        foreach ($articles as $article) {
+            if ($title == $article['title']) {
+                return view('article.show', ['article' => $article]);
+            }
+        }
 
-        return view('article.show', ['article' => $article]);
+        abort(404, 'Articolo non trovato');
     }
 }
