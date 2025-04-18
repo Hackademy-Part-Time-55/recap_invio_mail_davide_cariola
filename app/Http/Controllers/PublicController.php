@@ -32,22 +32,26 @@ class PublicController extends Controller
     public array $articles = [
         [
             'imageLink' => 'https://hyperfocus.cc/wp-content/uploads/2024/07/Jermaine-Thumbnail.jpg',
-            'title'     => 'INTERVIEW',
+            'eyebrow'   => 'INTERVIEW',
+            'title'     => 'Who is … Jermaine',
             'excerpt'   => 'Introducing Jermaine – A designer who loves edgy textures and striking contrasts',
         ],
         [
             'imageLink' => 'https://hyperfocus.cc/wp-content/uploads/2024/07/ADC-Thumbnail.jpg',
-            'title'     => 'ON STAGE',
+            'eyebrow'   => 'ON STAGE',
+            'title'     => 'ADC – Artificial Realities 2023',
             'excerpt'   => 'Our Co-Founder Paul at the ADC Digital Event on AI in Branding',
         ],
         [
             'imageLink' => 'https://hyperfocus.cc/wp-content/uploads/2024/07/Giang-Thumbnail.jpg',
-            'title'     => 'INTERVIEW',
+            'eyebrow'   => 'INTERVIEW',
+            'title'     => 'Who is … Giang?',
             'excerpt'   => 'Introducing Giang – Award winning designer with a no-bullshit attitude',
         ],
         [
             'imageLink' => 'https://hyperfocus.cc/wp-content/uploads/2024/07/Red-Dot-Thumbnail.jpg',
-            'title'     => 'NEWS',
+            'eyebrow'   => 'NEWS',
+            'title'     => 'RedDot Award',
             'excerpt'   => 'Hyperfocus wins prestigious RedDot Award for our work with Heimplanet',
         ],
     ];

@@ -16,6 +16,8 @@
     <div class="min-vh-100">
         {{ $slot }}
     </div>
+
+    <x-navigation.footer />
     
 </body>
 </html>

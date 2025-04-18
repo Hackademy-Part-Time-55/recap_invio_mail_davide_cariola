@@ -41,11 +41,12 @@
                 <div class="col-12 col-md-3">
                     <img src="{{ $article['imageLink'] }}" alt="{{ $article['excerpt'] }}" class="img-fluid mb-3">
                     <h4 class="fs-5 fw-light">
-                        {{ $article['title'] }}
+                        {{ $article['eyebrow'] }}
                     </h4>
-                    <h4 class="fs-5">
+                    <h4 class="fs-5 mb-3">
                         {{ $article['excerpt'] }}
                     </h4>
+                    <a href="{{ route('article.show', ['title' => $article['title']]) }}" class="text-dark">read more</a>
                 </div>
             @endforeach
         </div>
