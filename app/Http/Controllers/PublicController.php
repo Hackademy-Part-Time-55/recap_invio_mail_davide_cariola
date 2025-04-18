@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ContactMail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class PublicController extends Controller
 {
@@ -69,5 +71,31 @@ class PublicController extends Controller
                 'articles'    => $this->articles,
             ]
         );
+    }
+
+    /**
+     * Restituisce la pagina con form di contatto
+     */
+    public function contact()
+    {
+        return view('contact');
+    }
+
+    /**
+     * Riceve i dati dell'utente e gestisce l'invio dell'email
+     * @param Request $request
+     */
+    public function sendMail(Request $request)
+    {
+        $name = $request->input('name');
+        $email = $request->input('email');
+        $userMessage = $request->input('userMessage');
+
+        // Il metodo render ci permette di visualizzare l'estetica della mail senza inviarla
+        // return (new ContactMail($name, $email, $userMessage))->render();
+
+        Mail::to($email)->send(new ContactMail($name, $email, $userMessage));
+
+        dd('Controlla la tua email');
     }
 }
