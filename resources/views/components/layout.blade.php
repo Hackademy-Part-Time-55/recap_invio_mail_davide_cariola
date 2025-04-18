@@ -19,5 +19,15 @@
 
     <x-navigation.footer />
     
+    @if(session('emailSent'))
+        <div class="alert alert-success position-fixed bottom-0 end-0 me-2 p-3">
+            <div role="alert" aria-live="assertive" aria-atomic="true">
+                <div>
+                    {{ session('emailSent') }}
+                </div>
+            </div>
+        </div>
+    @endif
+
 </body>
 </html>

@@ -96,6 +96,6 @@ class PublicController extends Controller
 
         Mail::to($email)->send(new ContactMail($name, $email, $userMessage));
 
-        dd('Controlla la tua email');
+        return redirect()->route('homepage')->with('emailSent', 'You have succesfully sent an email');
     }
 }
