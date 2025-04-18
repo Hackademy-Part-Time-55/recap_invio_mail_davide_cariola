@@ -1,0 +1,34 @@
+:root {
+    --white: #ffffff;
+    --accent: #e4cce3;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    background-color: var(--white);
+}
+
+.bg-accent {
+    background-color: var(--accent);
+}
+
+.text-color-accent {
+    color: var(--accent);
+}
+
+.navbar {
+    width: calc(100% - 80px) !important;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px !important;
+}
+
+.masthead {
+    height: 100vh;
+    min-height: 500px;
+    background-image: url('../../public/media/hero-section.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
